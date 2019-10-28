@@ -10,7 +10,10 @@ pipeline {
         }
         stage('Maven Config') {
           steps {
-            withMaven(maven: 'Maven 3.1.1')
+            withMaven(maven: 'Maven 3.1.1') {
+              sh 'bat \'mvn package\''
+            }
+
           }
         }
       }
