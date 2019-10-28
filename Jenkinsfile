@@ -9,9 +9,10 @@ pipeline {
           }
         }
         stage('Maven Config') {
+          agent any
           steps {
             withMaven(maven: 'Maven 3.1.1') {
-              sh 'bat \'mvn package\''
+              sh 'sh \'mvn package\''
             }
 
           }
