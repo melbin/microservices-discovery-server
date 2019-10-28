@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Maven Config') {
           steps {
-            withMaven(jdk: 'Maven 3.1.1')
+            withMaven(maven: 'Maven 3.1.1')
           }
         }
       }
